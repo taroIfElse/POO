@@ -27,8 +27,24 @@ namespace VISTA
 
             string nombre = txtUsuario.Text;
             string contraseña = txtContraseña.Text;
-            string email = txtUsuario.Text;
+            string email = txtEmail.Text;
             string DNI = txtDni.Text;
+
+            if (nombre == "")
+            {
+                MessageBox.Show("Por favor, ingrese un nombre de usuario");
+            }else if (contraseña == "")
+            {
+                MessageBox.Show("Por favor ingrese una contraseña");
+            }else if(email == "")
+            {
+                MessageBox.Show("Por favor ingrese un mail");
+            }else if(DNI == "")
+            {
+                MessageBox.Show("Por favor ingrese un DNI");
+            }
+            else
+            {
             List<Perfil> listaPerfiles = ControladoraPerfiles.obtener_instancia().Listar_Perfiles();
             Perfil cliente = listaPerfiles.Find(p => p.Nombre == "Cliente");
 
@@ -46,6 +62,11 @@ namespace VISTA
 
             Form1 app = new Form1();
             app.Show();
+            }
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
