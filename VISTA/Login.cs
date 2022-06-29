@@ -22,7 +22,15 @@ namespace VISTA
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //validar inputs (podría ser en text change, depende de ustedes)
-
+            if (txtUsuario.Text == "")
+            {
+                MessageBox.Show("Por favor ingrese un usuario o email");
+            }else if (txtContraseña.Text=="")
+            {
+                MessageBox.Show("Por favor ingrese una contraseña");
+            }
+            else
+            {
             List<Usuario> listaUsuarios = ControladoraUsuarios.obtener_instancia().Listar_Usuarios();
             Usuario usuario = listaUsuarios.Find(u => (u.Nombre == txtUsuario.Text || u.Email == txtUsuario.Text) && u.Contraseña == txtContraseña.Text);
             if (usuario != null)
@@ -35,7 +43,13 @@ namespace VISTA
             {
                 MessageBox.Show("Credenciales inválidas");
             }
+            }
 
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }
