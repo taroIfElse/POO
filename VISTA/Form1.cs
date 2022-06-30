@@ -61,5 +61,15 @@ namespace VISTA
         {
 
         }
+
+        private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

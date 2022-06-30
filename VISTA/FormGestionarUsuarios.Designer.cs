@@ -43,6 +43,7 @@
             this.dgvGestionarUsuarios.Size = new System.Drawing.Size(607, 352);
             this.dgvGestionarUsuarios.TabIndex = 0;
             this.dgvGestionarUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGestionarUsuarios_CellContentClick);
+            this.dgvGestionarUsuarios.SelectionChanged += new System.EventHandler(this.dgvGestionarUsuarios_SelectionChanged);
             // 
             // btnAgregar
             // 

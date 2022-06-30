@@ -9,7 +9,13 @@ insert into Permisos values ('Guardar', 'btnGuardar')
  insert into Formularios values ('Gestionar Usuarios', 'formGestionarUsuarios')
  insert into Formularios values ('Usuario', 'formUsuario')
 
+ insert into Formularios values ('Listar Clientes', 'listarClientesToolStripMenuItem')
+  insert into Formularios values ('Agregar', 'agregarToolStripMenuItem')
+
 -- Agregar Perfiles
 insert into Perfiles values ('Cliente')
 insert into Perfiles values ('Super Admin')
 insert into Perfiles values ('Admin')
+
+
+
