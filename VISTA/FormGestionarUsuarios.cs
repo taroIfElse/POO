@@ -51,7 +51,7 @@ namespace VISTA
 
         private void dgvGestionarUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            Console.WriteLine(dgvGestionarUsuarios.SelectedRows);
             
         }
 

@@ -51,5 +51,15 @@ namespace VISTA
         {
           
         }
+
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNombreDeUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

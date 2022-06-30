@@ -37,35 +37,39 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(33, 57);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Location = new System.Drawing.Point(103, 234);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(132, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(180, 22);
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(33, 134);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Location = new System.Drawing.Point(779, 234);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(132, 22);
+            this.txtContraseña.Size = new System.Drawing.Size(180, 22);
             this.txtContraseña.TabIndex = 1;
+            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
             // lblNombreDeUsuario
             // 
             this.lblNombreDeUsuario.AutoSize = true;
-            this.lblNombreDeUsuario.Location = new System.Drawing.Point(29, 25);
+            this.lblNombreDeUsuario.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNombreDeUsuario.Location = new System.Drawing.Point(100, 201);
             this.lblNombreDeUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreDeUsuario.Name = "lblNombreDeUsuario";
-            this.lblNombreDeUsuario.Size = new System.Drawing.Size(93, 16);
+            this.lblNombreDeUsuario.Size = new System.Drawing.Size(93, 20);
             this.lblNombreDeUsuario.TabIndex = 2;
-            this.lblNombreDeUsuario.Text = "Usuario o mail";
+            this.lblNombreDeUsuario.Text = "User/Email";
+            this.lblNombreDeUsuario.Click += new System.EventHandler(this.lblNombreDeUsuario_Click);
             // 
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(29, 100);
+            this.lblContraseña.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblContraseña.Location = new System.Drawing.Point(776, 201);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(76, 16);
@@ -74,10 +78,10 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(33, 186);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Location = new System.Drawing.Point(472, 410);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(100, 28);
+            this.btnLogin.Size = new System.Drawing.Size(165, 76);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -87,13 +91,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(245, 260);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1129, 579);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.lblNombreDeUsuario);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
