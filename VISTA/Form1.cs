@@ -69,7 +69,8 @@ namespace VISTA
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormUsuario f = new FormUsuario();
+            f.Show();
         }
     }
 }
