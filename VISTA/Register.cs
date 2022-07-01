@@ -26,7 +26,7 @@ namespace VISTA
 
 
             string nombre = txtUsuario.Text;
-            string contraseña = txtContraseña.Text;
+            string contraseña = CONTROLADORA.Crypto.GetSHA256(txtContraseña.Text);
             string email = txtEmail.Text;
             string DNI = txtDni.Text;
 

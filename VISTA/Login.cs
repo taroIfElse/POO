@@ -32,7 +32,7 @@ namespace VISTA
             else
             {
             List<Usuario> listaUsuarios = ControladoraUsuarios.obtener_instancia().Listar_Usuarios();
-            Usuario usuario = listaUsuarios.Find(u => (u.Nombre == txtUsuario.Text || u.Email == txtUsuario.Text) && u.Contraseña == txtContraseña.Text);
+            Usuario usuario = listaUsuarios.Find(u => (u.Nombre == txtUsuario.Text || u.Email == txtUsuario.Text) && u.Contraseña ==CONTROLADORA.Crypto.GetSHA256(txtContraseña.Text) );
             if (usuario != null)
             {
                 ControladoraUsuarios.obtener_instancia().Agregar_Usuario_Actual(usuario);
