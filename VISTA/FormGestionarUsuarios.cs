@@ -13,6 +13,7 @@ namespace VISTA
     public partial class FormGestionarUsuarios : Form
     {
         private int selectedIndex = 0;
+        private List<MODELO.Permiso> permisos;
         public FormGestionarUsuarios()
         {
             InitializeComponent();
@@ -23,13 +24,13 @@ namespace VISTA
             FormUsuario form = new FormUsuario();
             form.Show();
         }
-
+        
         private void FormGestionarUsuarios_Load(object sender, EventArgs e)
         {
             MODELO.Usuario usuarioActual = CONTROLADORA.ControladoraUsuarios.obtener_instancia().usuarioActual;
             List<MODELO.Formulario> formularios = CONTROLADORA.ControladoraFormularios.obtener_instancia().Listar_Formularios(usuarioActual);
             MODELO.Formulario thisFormulario = formularios.Find(f => f.NombreSistema == "formGestionarUsuarios");
-            List<MODELO.Permiso> permisos = CONTROLADORA.ControladoraPermisos.obtener_instancia().Listar_Permisos(thisFormulario);
+            permisos = CONTROLADORA.ControladoraPermisos.obtener_instancia().Listar_Permisos(thisFormulario);
             permisos.ForEach(p =>
             {
                 if (p.NombreSistema == "btnAgregar") btnAgregar.Enabled = true;
@@ -51,7 +52,7 @@ namespace VISTA
 
         private void dgvGestionarUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+           
             
         }
 
@@ -75,6 +76,19 @@ namespace VISTA
 
             FormModificarUsuario form = new FormModificarUsuario(selected);
             form.Show();
+        }
+
+        private void dgvGestionarUsuarios_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvGestionarUsuarios.SelectedRows.Count > 0)
+            {
+                permisos.ForEach(p =>
+                {
+                    if (p.NombreSistema == "btnModificar") btnModificar.Enabled = true;
+                    if (p.NombreSistema == "btnEliminar") btnEliminar.Enabled = true;
+                });
+            }
+            Console.WriteLine(dgvGestionarUsuarios.SelectedRows);
         }
     }
 }
