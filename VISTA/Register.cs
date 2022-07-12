@@ -21,7 +21,6 @@ namespace VISTA
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            //TODO: validar inputs (podría ser en text change, depende de ustedes)
 
 
 
@@ -48,7 +47,6 @@ namespace VISTA
             List<Perfil> listaPerfiles = ControladoraPerfiles.obtener_instancia().Listar_Perfiles();
             Perfil cliente = listaPerfiles.Find(p => p.Nombre == "Cliente");
 
-            //ver si se puede usar el consctructor de Usuario directamente.
             Usuario u = new Usuario();
 
             u.Nombre = nombre;

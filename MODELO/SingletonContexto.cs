@@ -18,7 +18,7 @@ namespace MODELO
             if (_instancia == null)
             {
                 _instancia = new SingletonContexto();
-                //esto hace referencia a el contexto de la bd(entity framework) usar siemrpe el mismo contexto de la bd
+                //el contexto de la bd(entity framework), usar siemrpe el mismo contexto de la bd
                 _contexto = new ContextoContainer();
             }
             return _instancia;

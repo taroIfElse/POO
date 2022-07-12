@@ -21,7 +21,6 @@ namespace VISTA
     
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //validar inputs (podría ser en text change, depende de ustedes)
             Console.WriteLine(CONTROLADORA.Crypto.GetSHA256("admin"));
             if (txtUsuario.Text == "")
             {
