@@ -7,3 +7,5 @@ values (
 	('admin'),
 	(SELECT Id from Perfiles WHERE Perfiles.Nombre='Super Admin')
 )
+
+

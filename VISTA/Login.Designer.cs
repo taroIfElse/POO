@@ -49,6 +49,7 @@
             this.txtContraseña.Location = new System.Drawing.Point(779, 234);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(180, 22);
             this.txtContraseña.TabIndex = 1;
             this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
@@ -60,7 +61,7 @@
             this.lblNombreDeUsuario.Location = new System.Drawing.Point(100, 201);
             this.lblNombreDeUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreDeUsuario.Name = "lblNombreDeUsuario";
-            this.lblNombreDeUsuario.Size = new System.Drawing.Size(93, 20);
+            this.lblNombreDeUsuario.Size = new System.Drawing.Size(74, 16);
             this.lblNombreDeUsuario.TabIndex = 2;
             this.lblNombreDeUsuario.Text = "User/Email";
             this.lblNombreDeUsuario.Click += new System.EventHandler(this.lblNombreDeUsuario_Click);
