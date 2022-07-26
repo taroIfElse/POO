@@ -21,7 +21,6 @@ namespace VISTA
     
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(CONTROLADORA.Crypto.GetSHA256("admin"));
             if (txtUsuario.Text == "")
             {
                 MessageBox.Show("Por favor ingrese un usuario o email");
