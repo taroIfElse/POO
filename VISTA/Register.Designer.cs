@@ -42,7 +42,7 @@
             // btnRegister
             // 
             this.btnRegister.Location = new System.Drawing.Point(913, 472);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(170, 65);
             this.btnRegister.TabIndex = 9;
@@ -75,15 +75,17 @@
             // txtContraseña
             // 
             this.txtContraseña.Location = new System.Drawing.Point(54, 352);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(182, 22);
             this.txtContraseña.TabIndex = 6;
+            this.txtContraseña.UseSystemPasswordChar = true;
+            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(54, 163);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(182, 22);
             this.txtUsuario.TabIndex = 5;
@@ -102,7 +104,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(706, 163);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(182, 22);
             this.txtEmail.TabIndex = 10;
@@ -122,7 +124,7 @@
             // txtDni
             // 
             this.txtDni.Location = new System.Drawing.Point(706, 352);
-            this.txtDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDni.Margin = new System.Windows.Forms.Padding(4);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(182, 22);
             this.txtDni.TabIndex = 12;
@@ -142,9 +144,10 @@
             this.Controls.Add(this.lblNombreDeUsuario);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Register";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.Register_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
