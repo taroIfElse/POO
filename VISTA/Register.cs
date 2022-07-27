@@ -43,7 +43,9 @@ namespace VISTA
             else
             {
             List<Perfil> listaPerfiles = ControladoraPerfiles.obtener_instancia().Listar_Perfiles();
-            Perfil cliente = listaPerfiles.Find(p => p.Nombre == "Cliente");
+            Perfil cliente = listaPerfiles.Find(p => p.Nombre == "Cliente");//find es un metodo que
+                                                                            //recorre un array (p) y retorna el que esta comparando
+
 
             Usuario u = new Usuario();
 

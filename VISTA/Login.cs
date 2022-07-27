@@ -32,7 +32,7 @@ namespace VISTA
             {
             List<Usuario> listaUsuarios = ControladoraUsuarios.obtener_instancia().Listar_Usuarios();
             Usuario usuario = listaUsuarios.Find(u => (u.Nombre == txtUsuario.Text || u.Email == txtUsuario.Text) && u.Contraseña ==CONTROLADORA.Crypto.GetSHA256(txtContraseña.Text)) ;
-            if (usuario != null)
+            if (usuario != null) //filter me encuentra todos y el find solo un elemento
             {
                 ControladoraUsuarios.obtener_instancia().Agregar_Usuario_Actual(usuario);
                 Form1 app = new Form1();
@@ -57,6 +57,11 @@ namespace VISTA
         }
 
         private void lblNombreDeUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }

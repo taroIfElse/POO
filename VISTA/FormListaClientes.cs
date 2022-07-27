@@ -35,5 +35,10 @@ namespace VISTA
                 //this.Close();
             }
         }
+
+        private void dgvListaClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

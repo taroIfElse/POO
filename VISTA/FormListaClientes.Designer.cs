@@ -39,6 +39,7 @@
             this.dgvListaClientes.Name = "dgvListaClientes";
             this.dgvListaClientes.Size = new System.Drawing.Size(491, 415);
             this.dgvListaClientes.TabIndex = 0;
+            this.dgvListaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaClientes_CellContentClick);
             // 
             // FormListaClientes
             // 

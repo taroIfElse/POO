@@ -12,7 +12,7 @@ namespace CONTROLADORA
 
         private ControladoraPerfiles() { }
 
-        public static ControladoraPerfiles obtener_instancia()
+        public static ControladoraPerfiles obtener_instancia() //singleton
         {
             if (_instancia == null)
             {
@@ -21,15 +21,15 @@ namespace CONTROLADORA
             return _instancia;
         }
 
-        public List<MODELO.Perfil> Listar_Perfiles()
+        public List<MODELO.Perfil> Listar_Perfiles() //lista perfiles
         {
-            return MODELO.SingletonContexto.obtener_instancia().Contexto.Perfiles.ToList();
+            return MODELO.SingletonContexto.obtener_instancia().Contexto.Perfiles.ToList();//tolist es una funcion que lista
         }
 
-        public void Llenar_Lista_Perfiles(List<MODELO.Perfil> perfiles)
+        public void Llenar_Lista_Perfiles(List<MODELO.Perfil> perfiles)//llena lista perfiles
         {
-            MODELO.SingletonContexto.obtener_instancia().Contexto.Perfiles.AddRange(perfiles);
-            MODELO.SingletonContexto.obtener_instancia().Contexto.SaveChanges();
+            MODELO.SingletonContexto.obtener_instancia().Contexto.Perfiles.AddRange(perfiles);//add agrega los perfiles
+            MODELO.SingletonContexto.obtener_instancia().Contexto.SaveChanges();//guarda
         }
     }
 }

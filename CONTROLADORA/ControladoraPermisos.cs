@@ -12,7 +12,7 @@ namespace CONTROLADORA
 
         private ControladoraPermisos() { }
 
-        public static ControladoraPermisos obtener_instancia()
+        public static ControladoraPermisos obtener_instancia()//singleton
         {
             if (_instancia == null)
             {
@@ -21,9 +21,9 @@ namespace CONTROLADORA
             return _instancia;
         }
 
-        public List<MODELO.Permiso> Listar_Permisos(MODELO.Formulario formulario)
+        public List<MODELO.Permiso> Listar_Permisos(MODELO.Formulario formulario)//funcion listar permisos en funcion a cada form
         {
-            return formulario.Permiso.ToList();
+            return formulario.Permiso.ToList();//lista los form en funcion a los permisos
         }
     }
 }

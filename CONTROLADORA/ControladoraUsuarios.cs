@@ -9,7 +9,7 @@ namespace CONTROLADORA
     public class ControladoraUsuarios
     {
         private static ControladoraUsuarios _instancia;
-        public MODELO.Usuario usuarioActual = null;
+        public MODELO.Usuario usuarioActual = null;//el usuario al principio es vacio
 
         private ControladoraUsuarios() { }
 

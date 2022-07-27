@@ -32,7 +32,7 @@ namespace VISTA
         private void FormUsuario_Load(object sender, EventArgs e)
         {
 
-            List<MODELO.Perfil> perfiles = CONTROLADORA.ControladoraPerfiles.obtener_instancia().Listar_Perfiles();
+            List<MODELO.Perfil> perfiles = CONTROLADORA.ControladoraPerfiles.obtener_instancia().Listar_Perfiles();//lista los perfiles
             cmbPerfiles.DataSource = perfiles.Where(p => p.Id == 31).ToList();
         }
 

@@ -17,6 +17,11 @@ namespace VISTA
             InitializeComponent();
             textBox1.Text = usuario.Perfil.Nombre;
         }
+
+        private void FormModificarUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
         //agregar lógica para modificar al usuario. En el objeto usuario tenemos el id.
     }
 }
