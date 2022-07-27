@@ -21,7 +21,6 @@ namespace VISTA
         {
             //traemos usuario actual
             MODELO.Usuario usuario = CONTROLADORA.ControladoraUsuarios.obtener_instancia().usuarioActual;
-            Console.WriteLine(usuario);
             //traemos los formularios de este usuario (ver metodo en controladora)
             List<MODELO.Formulario> formularios_habilitados = CONTROLADORA.ControladoraFormularios.obtener_instancia().Listar_Formularios(usuario);
             //por cada formulario

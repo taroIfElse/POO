@@ -88,7 +88,7 @@ namespace VISTA
                     if (p.NombreSistema == "btnEliminar") btnEliminar.Enabled = true;
                 });
             }
-            Console.WriteLine(dgvGestionarUsuarios.SelectedRows);
+            
         }
     }
 }
