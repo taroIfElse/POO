@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CONTROLADORA
-{ //CLASE
+{ //Clase
     public class ControladoraFormularios
     {
         private static ControladoraFormularios _instancia;
